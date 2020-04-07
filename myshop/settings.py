@@ -124,12 +124,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+
 CART_SESSION_ID = 'cart'
 
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 # Braintree settings
 BRAINTREE_MERCHANT_ID = 'mgrfn54szg96k97d'
@@ -145,3 +149,6 @@ Configuration.configure(
     BRAINTREE_PUBLIC_KEY,
     BRAINTREE_PRIVATE_KEY
 )
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
