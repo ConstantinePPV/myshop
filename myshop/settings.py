@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
     'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
@@ -166,3 +167,16 @@ Configuration.configure(
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+
+# django-parler
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'ru'},
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}
